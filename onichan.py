@@ -28,7 +28,7 @@ async def on_message(message):
     if message.author == client.user:
         return
     
-    if message.content.startswith('$hello'):
+    if message.content.startswith('hit me'):
         response = requests.request("GET", url)
         res = json.loads(response.text)
         character = res["character"]
